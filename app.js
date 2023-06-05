@@ -13,8 +13,6 @@ let  app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-
-
 app.set('view engine', 'ejs'); // installed with the command "express -e". This is our view engine. 
 
 app.use(logger('dev'));
