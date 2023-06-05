@@ -32,18 +32,38 @@ Date: June 4, 2023 -->
           <h2>Stundet #: 301289095</h2>
           <h2>Course: COMP229 Section: 402</h2>
           <h2><a href="/Assets/cv.pdf">Download my CV</a></h2>
-          <br><br>
-          <img src="/Assets/images/user.png" alt="user" width="250" >
-          <br>
-          <i>I will replace this image later..</i>
-
         </div>        
+        <div>
+          <img src="/Assets/images/user.png" alt="user" width="250" >
+        </div>
     <% } else if(title == "Products"){ %>
-          <div>I am in Products</div>
+          <div>
+            <h1>Product 1</h1>
+            <br>
+            <h1>Product 2</h1>
+            <br>
+            <h1>Product 3</h1>
+            <br>
+            <h1>Product 4</h1>
+          </div>
     <% } else if(title == "Services"){ %>
-            <div>I am in Services</div>
+            <div>
+              <ul>
+                <li><i class="fa-solid fa-bars-staggered"></i> Web Designing</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> Android App Developemt</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> iOS Developemt</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> PHP Developemt</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> C# Developemt</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> Asp.net Developemt</li>
+              </ul>
+            </div>
     <% } else if(title == "Contact"){ %>
-              <div>I am in Contact</div>
+              <div>
+                  Full Name: <input class="form-control" type="text" placeholder="Enter full name"><br>
+                  Email: <input class="form-control" type="text" placeholder="Enter email"><br>
+                  Phone: <input class="form-control" type="text" placeholder="Enter phone"><br>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
     <% }  %>
         
     </li>
