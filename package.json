@@ -18,12 +18,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.7.0",
+    "mongoose": "^7.3.0",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
   "description": "Second Demo App",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techbram/Comp229_Sec402_hemal.git"
