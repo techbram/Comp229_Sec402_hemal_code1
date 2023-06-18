@@ -42,6 +42,14 @@ Date: June 4, 2023 -->
             <% }  %>
             <a class="nav-link" href="/services"><i class="fa-solid fa-gear"></i> Services </a>
         </li>
+
+        <% if(title == "Games"){ %>
+          <li class="nav-item active">
+            <% } else { %>
+            <li class="nav-item">
+            <% }  %>
+            <a class="nav-link" href="/game-list"><i class="fa-solid fa-gamepad"></i> Games </a>
+        </li>
   
         <% if(title == "Contact"){ %>
           <li class="nav-item active">

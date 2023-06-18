@@ -10,7 +10,7 @@ router.get('/', async (req, res, next) =>{
     try {
         let gameList = await Game.find();
         // console.log(gameList);
-        res.render('game', {title: 'Game List', GameList: gameList})
+        res.render('game/list', {title: 'Games', GameList: gameList})
     } catch (err) {
         console.error(err);
     }
