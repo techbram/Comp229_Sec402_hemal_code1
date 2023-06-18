@@ -27,7 +27,7 @@ module.exports.displayAddPage = async (req, res, next) =>{
 module.exports.processAddPage = async (req, res, next) =>{
     let newGame = new Game({
         "name": req.body.name,
-        "developer": req.body.developer,
+        "Developer": req.body.developer,
         "released": req.body.released,
         "description": req.body.description,
         "price": req.body.price
@@ -58,7 +58,7 @@ module.exports.processEditPage = async (req, res, next) =>{
     let id = req.params.id;
     let updatedGame = {
         "name": req.body.name,
-        "developer": req.body.developer,
+        "Developer": req.body.developer,
         "released": req.body.released,
         "description": req.body.description,
         "price": req.body.price
