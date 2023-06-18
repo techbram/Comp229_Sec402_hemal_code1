@@ -1,5 +1,5 @@
 {
-  "name": "assignment1",
+  "name": "assignment2",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
-  "description": "First Demo App",
+  "description": "Second Demo App",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
