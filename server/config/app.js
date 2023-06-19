@@ -14,6 +14,7 @@ let DB = require('./db');
 let  indexRouter = require('../routes/index');
 let  usersRouter = require('../routes/users');
 let gamesRouter = require('../routes/game');
+let contactRouter = require('../routes/contact');
 
 
 // point mongoose to the DB URI
@@ -45,6 +46,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/game-list', gamesRouter);
+app.use('/contact-list', contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
