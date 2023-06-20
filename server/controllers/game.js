@@ -10,7 +10,10 @@ module.exports.displayGameList = async (req, res, next) => {
         let gameList = await Game.find();
         // console.log(gameList)
 
-        res.render('game/list', {title: 'Games', GameList: gameList})
+        res.render('game/list', {
+            title: 'Games', 
+            GameList: gameList,
+            displayName: req.user ? req.user.displayName : ''})
     } catch (err) {
         console.error(err);
     }
@@ -18,7 +21,9 @@ module.exports.displayGameList = async (req, res, next) => {
 
 module.exports.displayAddPage = async (req, res, next) =>{
     try {
-        res.render('game/add', {title: 'Add Game'})
+        res.render('game/add', {
+            title: 'Add Game', 
+            displayName: req.user ? req.user.displayName : ''})
     } catch (err) {
         console.error(err);
     }
@@ -27,7 +32,7 @@ module.exports.displayAddPage = async (req, res, next) =>{
 module.exports.processAddPage = async (req, res, next) =>{
     let newGame = new Game({
         "name": req.body.name,
-        "Developer": req.body.developer,
+        "developer": req.body.developer,
         "released": req.body.released,
         "description": req.body.description,
         "price": req.body.price
@@ -47,7 +52,10 @@ module.exports.displayEditPage = async (req, res, next) =>{
 
     try {
         let gameToEdit = await Game.findById(id);
-        res.render('game/edit', {title: 'Edit Game', game: gameToEdit});
+        res.render('game/edit', {
+            title: 'Edit Game', 
+            game: gameToEdit, 
+            displayName: req.user ? req.user.displayName : ''});
     } catch (err) {
         console.log(err);
         res.status(500).send(err);
@@ -58,7 +66,7 @@ module.exports.processEditPage = async (req, res, next) =>{
     let id = req.params.id;
     let updatedGame = {
         "name": req.body.name,
-        "Developer": req.body.developer,
+        "developer": req.body.developer,
         "released": req.body.released,
         "description": req.body.description,
         "price": req.body.price
